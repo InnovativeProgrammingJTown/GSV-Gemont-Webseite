@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <!--Metatags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="GSV Gemont">
+    <meta property="og:image" content="gemontlogo">
+    <meta property="og:description" content="Informationen zur GSV">
+    <meta name="description" content="Dies ist die offizielle Seite der GSV des Gebrüder Montgolfier Gymnasiums!">
+    <meta name="keywords" content="Gesamtschülervertretung, GSV, Gemont, Gebürder-Montgolfier, Gymnasium">
+    <meta name="author" content="William Brandt, Tim Lischewski, Tom Engelmann, Matthias Frey">
+    <meta name="theme-color" content="#ff6347">
+
+    <!--Verlinkungen-->
+    <link rel=stylesheet href="style.css" type="text/css">
+    <link rel="stylesheet" href="tablet.css" type="text/css">
+    <link rel="stylesheet" href="smartphone.css" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <!--Titel-->
+    <title>GSV Gemont | Startseite</title>
+
+    <!--Timerscript-->
+    <script>
+// In den Klammern steht das Datum zu dem wir runterzählen
+var countDownDate = new Date("Jun 2, 2018 15:37:25").getTime();
+
+// Update the count down every 1 second
+var countdownfunction = setInterval(function() {
+
+    // Das aktuelle Datum wird erzeugt
+    var now = new Date().getTime();
+
+    // Die Differenz wird gebildet
+    var distance = countDownDate - now;
+
+    // Zeitrechnungen für Tage,Stunden,Minuten und Sekunden
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Text wird erzeugt
+    document.getElementById("timer").innerHTML = "<span>Noch: </span>"+"<span>" + days + "<i>Tage |</i></span> <span>" +  hours + " <i>Stunden |</i></span><span> "
+    + minutes + "  <i> Minuten |</i></span><span>  " + seconds + " <i>Sekunden</i></span>  " + "<span> bis zur nächsten GSV! </span>";
+
+    // Text wird erzeugt wenn Zeit abgelaufen ist
+    if (distance < 0) {
+        clearInterval(countdownfunction);
+        document.getElementById("timer").innerHTML = "Die GSV hat bereits stattgefunden!";
+    }
+}, 1000);
+</script>
+</head>
+
+<body>
+    <div id="sanfang"> Copyright &copy; Innovative Programming JTown </div>
+    <!--Navigationsleiste-->
+    <nav>
+        <img src="gemontlogo.jpg" alt="gemontlogo" class="logonav">
+        <ul>
+
+            <li> <a href="#" class="active">Startseite</a></li>
+            <li> <a href="#">Über Uns</a></li>
+            <li> <a href="#">Veranstaltungen</a></li>
+            <li> <a href="#">Kontakt</a></li>
+
+        </ul>
+    </nav>
+    <!--Timer-Divcontainer-->
+    <div id="timer"></div>
+
+    <!--Bild für die Landingpage-->
+    <img src="images/Conference3.jpg" class="landingimg">
+
+    <!--Icon ArrowDown auf Landingpage-->
+    <i class="material-icons" id="arrowdown"><a href="#bookmark" style="text-decoration: none; color: black">keyboard_arrow_down</a></i>
+
+    <!--Text in Landingpage-->
+    <div id="paraImg"><p >Willkommen bei der GSV des Gemonts! </p></div>
+
+    <!--Content-->
+    <article>
+        <div>
+            <!--Bookmark (hidden)-->
+            <h1 id="bookmark">
+                Copyright &copy; IPJ
+            </h1>
+        </div>
+        <br>
+            <!--Überschrift-->
+        <div class="wktext">
+            <h1 class="wkueberschrift">
+                Willkommen bei uns!
+            </h1>
+            <br>
+            <!--Textinhalt-->
+            <p>
+                Sint commodo despicationes, ex enim arbitror exercitation ab doctrina lorem
+                excepteur possumus aut nam ipsum fabulas iudicem, nulla officia iudicem qui ita
+                eu aliqua varias quis ab minim concursionibus cupidatat varias incurreret an
+                cillum admodum nescius. Eu quem commodo offendit ab occaecat duis enim appellat
+                culpa o irure comprehenderit cernantur labore consequat, enim si eu elit
+                commodo. Varias admodum ita nisi labore, quamquam lorem fore doctrina tamen ubi
+                ad possumus in iudicem aut officia multos fugiat probant illum ita anim appellat
+                praetermissum ita quae sed ullamco quo noster eruditionem cernantur malis
+                ingeniis, ita iis concursionibus. Dolore quibusdam in efflorescere, tempor tamen
+                quis e irure ea excepteur ad legam pariatur, elit eiusmod appellat est proident
+                multos fore doctrina sunt, commodo quo eram laborum ne ne labore id culpa, non
+                nisi nostrud domesticarum. Aut de tamen cernantur qui quibusdam velit ea
+                quamquam comprehenderit. E varias concursionibus, qui illum coniunctione est ad
+                fore esse ad iudicem, est expetendis eu admodum est consequat culpa pariatur,
+                laboris duis quibusdam excepteur hic velit senserit ne excepteur, ubi noster
+                varias quid probant. Varias vidisse ea litteris ab iudicem eu amet, non ita fore cillum fugiat,
+                aliqua domesticarum expetendis legam ullamco. Ita et amet aute summis non
+                incididunt quorum quamquam cupidatat ubi noster deserunt despicationes, lorem
+                graviterque senserit legam cernantur, o lorem pariatur, eu amet efflorescere ex
+                tempor ex esse possumus est quo expetendis voluptatibus. Ipsum laborum iis
+                fidelissimae. Eiusmod id labore ullamco, arbitror te noster laboris qui quamquam
+                amet an mentitum voluptatibus a ut malis expetendis graviterque. Se ipsum
+                voluptate nostrud est vidisse esse ubi laborum exercitation, qui do illustriora
+                si amet ingeniis se nescius. Litteris culpa officia id litteris quae laboris.
+                Esse excepteur comprehenderit ut o enim sint a mentitum. Ne esse varias noster commodo nam incurreret duis vidisse. Te irure cernantur
+                deserunt. Commodo amet elit laboris aliqua, est ex magna litteris. Incididunt ea
+                enim eiusmod, ipsum arbitrantur probant malis mandaremus. Mandaremus sed
+                cernantur aut eiusmod ex amet senserit. Quem non voluptate se enim. Aut nulla aliqua non arbitror hic et quorum dolor ipsum proident in cernantur
+                magna quorum non velit ubi singulis malis dolore laborum eram, doctrina amet
+                labore iis legam an vidisse noster laboris iudicem do hic eiusmod coniunctione
+                iis in eu sint enim fore. Legam o excepteur qui duis ne tempor magna malis
+                eiusmod quis, ubi elit distinguantur, e labore consectetur. Singulis nulla magna
+                nescius tamen. Hic enim nostrud eruditionem ita minim consequat incididunt ita
+                se senserit graviterque, ita irure cillum est nostrud ut cupidatat se eiusmod id
+                possumus culpa malis et magna ut possumus exquisitaque et offendit, admodum non
+                multos. Summis litteris id laboris iis a admodum domesticarum. Hic cillum e aute
+                eu do malis consequat si do pariatur firmissimum, appellat enim nam commodo
+                comprehenderit. Culpa fabulas transferrem. Ullamco minim senserit. Doctrina quem lorem e aliqua nam sed fabulas se
+                occaecat. Eu do velit expetendis non a ubi sunt quae magna. Arbitror duis varias
+                litteris esse quo lorem quamquam pariatur do offendit elit dolor ita multos a
+                arbitror anim ne aliquip fidelissimae ab sunt quamquam id commodo, irure nescius
+                et magna malis, quis sed vidisse ab sunt si nostrud do vidisse. Probant culpa
+                hic commodo sempiternum. Commodo irure legam quo amet. Non amet incurreret do appellat iis ullamco. Admodum sunt sunt appellat enim,
+                cupidatat veniam sunt qui quid iis voluptate elit probant, velit cernantur de
+                proident. Cupidatat quem esse eu eram, elit ubi ad aliqua singulis, sed quem ad
+                minim qui fugiat ubi quamquam sed appellat nulla ingeniis et laboris tamen aute
+                iudicem aute, ita noster voluptate graviterque, illum commodo ad culpa sunt. Se
+                irure officia, ita lorem excepteur eiusmod ab de ingeniis illustriora, elit ne
+                do summis appellat. Occaecat legam veniam consequat enim, senserit relinqueret
+                sed tempor quo lorem expetendis e tamen aliqua te id anim a malis. Id multos
+                amet irure laborum, incurreret duis ad singulis cohaerescant aut fugiat fabulas
+                senserit, multos voluptate non quid amet. Si senserit reprehenderit ex nescius
+                nisi probant, occaecat imitarentur a incididunt, id minim transferrem.
+            </p>
+        </div>
+
+    </article>
+
+    <!--SocialMediaSideBar-->
+    <aside class="socialMedia" id="scm" >
+        <ul>
+            <li> <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a> </li>
+            <li> <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a> </li>
+            <li> <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a> </li>
+        </ul>
+    </aside>
+
+    <!--JavaScript für Scrolleffekt-->
+    <script type="text/javascript">
+        var foo = document.getElementById('scm');
+
+        window.onscroll = function() {
+            foo.style.display = ((window.pageYOffset || document.documentElement.scrollTop) > 500) ? 'block' : 'none';
+                                    };
+    </script>
+
+   <!--Footer-->
+    <footer>
+        <!--Impressum-->
+        <p> <a href="#" id="impressum">Impressum</a></p>
+        <!--Copyright-->
+        <p>Copyright &copy; Innovative Programming JTown</p>
+        <!--Zum Seitenanfang-->
+        <p><i class="material-icons" title="Zum Seitenanfang" id="arrowup"><a href="#sanfang">expand_less</a></i></p>
+    </footer>
+
+</body>
+</html>
