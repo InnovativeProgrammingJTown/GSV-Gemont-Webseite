@@ -1,0 +1,239 @@
+
+
+/*Schriftart und Eliminierung von ungewollten Margins und Paddings*/
+body{
+    margin:0;
+    padding:0;
+    font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
+}
+
+
+/***Bookmark Seitenanfang***/
+#sanfang {
+    visibility: hidden;
+    position: absolute;
+}
+/******/
+
+/* Sticky full-width Menubar */
+nav{
+    border-bottom: 1px solid grey;
+    width: 100%;
+    position: sticky;
+    position: -webkit -sticky;
+    top:0;
+    font-size:23px;
+    background-color: white;
+    z-index: 10;
+}
+
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin:0;
+    padding:0;
+}
+nav ul li{
+    display: block;
+    padding:16px;
+    background-color: white;
+    border-left: 1px solid grey;
+
+}
+nav ul li a{
+    text-decoration: none;
+    color:black;
+}
+
+nav ul li a:hover{
+    color:tomato;
+}
+/*Gemontlogo oben links*/
+.logonav{
+    width:160px;
+    height:35px;
+    float: left;
+    padding-top: 15.5px;
+}
+
+/*Aktiver Teil der Seite- Anpassen für die aktuelle Seite in HTML benötigt*/
+
+.active{
+    color:tomato;
+}
+
+/*Timerbanner in tomato ohne timer*/
+.timerbanner{
+    background-color: tomato;
+    height:30px;
+    width:100%;
+    padding:0;
+    margin:0;
+    clear: both;
+    border-top: 1px solid grey;
+}
+
+/*LandingImg*/
+.landingImg-container{
+    width:100%;
+    height:900px;
+    margin:auto;
+    position:relative;
+    
+    
+}
+
+.landingImg{
+    position: relative;
+    width=100%;
+    height:900px;
+}
+
+
+.landingImg-caption{
+    position: absolute;
+    font-size:30px;
+    background-color: rgba(50,50,50,0.8);
+    color: white;
+    top:60%;
+    display:inline-block;
+    left:5%;
+    border-radius: 30px;
+     
+}
+
+.landingImg-caption p{
+    padding:50px;
+    padding-left: 150px;
+    padding-right: 150px;
+    
+
+}
+
+/*Vorstellungstext*/
+
+.vorstellungscontainer{
+    width: 83%;
+    border: 2px groove grey;
+    margin-top: 100px;
+    margin-left:auto;
+    margin-right: auto;
+    font-size: 16px;
+}
+
+ .text-container{
+    padding:20px;
+}
+
+
+.heading-vorstellung{
+    color:tomato;
+}
+
+.vorstellung{
+    margin-top: 20px;
+    
+}
+
+
+/*Beschreibungen der Schülersprecher*/
+
+.team{
+    padding:50px 0;
+    box-sizing: border-box;
+   
+}
+
+
+
+.teamcontainer{
+    width: 80%;
+    margin: 50px auto;
+    border: 1px solid grey;
+}
+
+.teamrow{
+    position:relative;
+    width:100%;
+    min-height: 150px;
+    box-sizing: border-box;
+    display:flex;
+    flex-direction: row;
+    justify-content:space-between;
+    
+    
+}
+ .member{
+    margin: 30px 80px;
+    width:15%;
+    overflow: hidden;
+    max-height: 200px;
+    
+}
+
+.member img{
+    width:100%;
+    height:100%;
+    
+}
+
+.memberdescription{
+    height: 150px;
+    width:100%;
+    background:black;
+    z-index: 2;
+    position: relative
+}
+
+
+
+
+
+
+
+/***Footer***/
+footer {
+background-color: #666;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 13%;
+    padding-right: 13%;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.impressum {
+    color: white;
+}
+/***Zum Seitenanfang***/
+#arrowup {
+    border: 2px solid #333;
+    border-radius: 50%;
+    background-color: rgb(1,1,1, 0.1);
+    transition:     background-color 350ms ease-out,
+                    transform        350ms ease-out;
+}
+#arrowup a {
+    font-size: 30px;
+    text-decoration: none;
+    color: black;
+}
+
+#arrowup:hover {
+    background-color: tomato;
+    transform: scale(1.2);
+}
+/******/
+
+
+footer p {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    padding: 1em;
+    bottom: 0;
+}
+/******/
