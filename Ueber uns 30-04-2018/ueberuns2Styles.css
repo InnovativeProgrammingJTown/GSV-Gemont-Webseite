@@ -17,14 +17,15 @@ body{
 
 /* Sticky full-width Menubar */
 nav{
-    border-bottom: 1px solid grey;
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0,0.16), 0 0 0 1px rgba(0, 0, 0,0.08);
+    border-bottom: 1px solid lightgrey;
     width: 100%;
     position: sticky;
     position: -webkit -sticky;
     top:0;
-    font-size:23px;
+    font-size:25px;
     background-color: white;
-    z-index: 10;
+    z-index: 7;
 }
 
 
@@ -37,9 +38,9 @@ nav ul{
 }
 nav ul li{
     display: block;
-    padding:16px;
+    padding:18px 14px 14px 14px;
     background-color: white;
-    border-left: 1px solid grey;
+    border-left: 1px solid lightgrey;
 
 }
 nav ul li a{
@@ -52,10 +53,10 @@ nav ul li a:hover{
 }
 /*Gemontlogo oben links*/
 .logonav{
-    width:160px;
-    height:35px;
-    float: left;
-    padding-top: 15.5px;
+    width:120px;
+    height:27px;
+    
+   
 }
 
 /*Aktiver Teil der Seite- Anpassen für die aktuelle Seite in HTML benötigt*/
