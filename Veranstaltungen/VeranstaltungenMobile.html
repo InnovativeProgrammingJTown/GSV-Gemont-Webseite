@@ -28,6 +28,10 @@
     
     <!--JQuery Einbindung-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <!--Icon Einbindung-->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    
 </head>
 
 <body>
@@ -69,7 +73,7 @@
     <!--Timerscript-->
     <script>
         // In den Klammern steht das Datum zu dem wir runterzählen
-        var countDownDate = new Date("Jul 5, 2018 15:37:25").getTime();
+        var countDownDate = new Date("Aug 16, 2018 15:37:25").getTime();
         
         // Update the count down every 1 second
         var countdownfunction = setInterval(function() {
@@ -87,13 +91,23 @@
             var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
             // Text wird erzeugt
-            document.getElementById("timer").innerHTML = "<span>Noch: </span>"+"<span>" + days + "<i>Tage |</i></span> <span>" +  hours + " <i>Stunden |</i></span><span> "
+            document.getElementById("timermobile").innerHTML = "<span>Noch: </span>"+"<span>" + days + "<i>Tage |</i></span> <span>" +  hours + " <i>Stunden |</i></span><span> "
             + minutes + "  <i> Minuten |</i></span><span>  " + seconds + " <i>Sekunden</i></span>  " + "<span> bis zur nächsten GSV! </span>";
-
-            // Text wird erzeugt wenn Zeit abgelaufen ist
+            
+            // Text wird erzeugt(Desktop)
+            document.getElementById("timerdesktop").innerHTML = "<span>Noch: </span>"+"<span>" + days + "<i>Tage |</i></span> <span>" +  hours + " <i>Stunden |</i></span><span> "
+            + minutes + "  <i> Minuten |</i></span><span>  " + seconds + " <i>Sekunden</i></span>  " + "<span> bis zur nächsten GSV! </span>";
+            
+            // Text wird erzeugt wenn Zeit abgelaufen ist(Mobil)
             if (distance < 0) {
                 clearInterval(countdownfunction);
-                document.getElementById("timer").innerHTML = "Die GSV hat bereits stattgefunden!";
+                document.getElementById("timermobile").innerHTML = "Die GSV hat bereits stattgefunden!";
+            }
+            
+            // Text wird erzeugt wenn Zeit abgelaufen ist(Desktop)
+            if (distance < 0) {
+                clearInterval(countdownfunction);
+                document.getElementById("timerdesktop").innerHTML = "Die GSV hat bereits stattgefunden!";
             }
         }, 1000);
     </script>
@@ -112,7 +126,7 @@
         <div class="dropdown">
             
             <!--Hamburger Button-->
-            <button onclick="dropDown()"class="hamburger hamburger--slider" type="button">
+            <button onclick="dropDown()"class="hamburger hamburger--slider" type="button" id="mobilebutton">
                 <span class="hamburger-box">
                     <span class="hamburger-inner"></span>
                 </span>
@@ -121,8 +135,14 @@
             <!--Navigationscontainer-->
             <div class="dropdown-content" id="myDropdown">
                 
+                
+                
                 <!--Linkliste-->
                 <ul>
+                    <li>
+                        <!--GSV Logo-->
+                        <img src="gsv%20gemont%20logo.png" alt="gemontlogo" class="logonav" id="logodesktop" >
+                    </li>
                     <li> <a href="#">Startseite</a></li>
                     <li> <a href="#">Über Uns</a></li>
                     <li> <a href="#" class="active">Veranstaltungen</a></li>
@@ -157,7 +177,14 @@
         <div>
             
             <!--GSV Logo-->
-            <img src="gsv%20gemont%20logoweiß.png" alt="gemontlogo" class="logonav">
+            <img src="gsv%20gemont%20logoweiß.png" alt="gemontlogo" class="logonav" id="logomobile">
+        </div>
+        
+        <!--Timerbanner-->
+        <div class="timerbanner">
+            
+            <!--Timerfenster-->
+            <div id="timerdesktop"></div>         
         </div>
     </nav>
     
@@ -169,10 +196,10 @@
     <div class="wrapper">
         
         <!--Timerfenster-->
-        <div id="timer"></div>
+        <div id="timermobile"></div>
         
         <!--Buttoncontainer-->        
-        <div class="Auswahlcontainer">
+        <div class="Auswahlcontainer" id="auswahlmobile">
             <button onclick="showcontent('old')" type="button" class="categorychooser">Vergangene Veranstaltungen</button>
             <button onclick="showcontent('new')" type="button" class="categorychooser">Kommende Veranstaltungen</button>        
         </div>
@@ -380,6 +407,93 @@
                 </ul>    
             </div>
         </div>
+        
+        
+        
+        <div id="desktopside" class="sidenav">
+           
+            <a href="#" id="calendar">Terminkalender <i class="fas fa-calendar-alt sidenavOption"></i></a>
+            <a href="#" id="upcoming">Zukünftiges <i class="far fa-hand-point-right sidenavOption"></i></a>
+            <a href="#" id="reports">Berichte <i class="far fa-hand-point-left sidenavOption"></i></a>
+            
+        </div>
+        
+        <div class="wrapperdesktopcontent">
+            <div class="desktoptopic"><h1>Vergangene Veranstaltungen</h1></div>
+        
+            <div class="Vergangenes">
+            
+            <div class="report">
+                <div class="reporttext">
+                    
+                    <!--Report-Überschrift-->
+                    <h3>Vernetzungsseminar</h3>
+                    
+                    <!--Bild als Link-->
+                    <a href="#"><img src="workplace.jpg" class="picturereport"></a>
+                    
+                    <!--Reportbeschreibung-->
+                    <p><br/> Lorem ipsum dolor amet raclette drinking vinegar echo park kitsch biodiesel, wolf yr copper mug wayfarers scenester franzen. </p>
+                </div>
+                
+                <!--Weiterlesen Link-->
+                <a href="#" class="readmore">&#10132; Bericht lesen</a>
+            </div>
+                
+                
+            <div class="report">
+                <div class="reporttext">
+                    
+                    <!--Report-Überschrift-->
+                    <h3>Vernetzungsseminar</h3>
+                    
+                    <!--Bild als Link-->
+                    <a href="#"><img src="workplace.jpg" class="picturereport"></a>
+                    
+                    <!--Reportbeschreibung-->
+                    <p><br/> Lorem ipsum dolor amet raclette drinking vinegar echo park kitsch biodiesel, wolf yr copper mug wayfarers scenester franzen. </p>
+                </div>
+                
+                <!--Weiterlesen Link-->
+                <a href="#" class="readmore">&#10132; Bericht lesen</a>
+            </div>
+        
+        
+        
+        
+        
+        </div>
+        
+        
+        
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        <!--SocialMediaSideBar-->
+        <aside class="socialMedia" id="scm" >
+            <ul>
+                <li> <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a> </li>
+                <li> <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a> </li>
+                <li> <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a> </li>
+            </ul>
+        </aside>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     </div>
 
     
@@ -396,7 +510,7 @@
         <div><p>Copyright &copy; Innovative Programming JTown</p></div>
         
         <!--Zum Seitenanfang-->
-        <p><a href="#sanfang"><i class="fas fa-angle-up"></i></a></p>
+        <p><a href="#sanfang"><i id="arrowup" class="fas fa-angle-up"></i></a></p>
     </footer>
 </body>
 </html>
