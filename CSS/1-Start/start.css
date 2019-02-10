@@ -4,12 +4,12 @@
 
 /*Schriftart und Eliminierung von ungewollten Margins und Paddings*/
 body{
-    
+
     margin:0;
     padding:0;
     font-family: "Open Sans", sans-serif;
     box-sizing: border-box;
-    
+
 }
 
 ::-webkit-scrollbar {
@@ -24,8 +24,8 @@ display: none;
 /******/
 
 /* Sticky full-width Menubar */
-nav{    
-    
+nav{
+
     width: 100%;
     position: sticky;
     position: -webkit -sticky;
@@ -44,7 +44,7 @@ nav ul{
     list-style-type: none;
     margin:0;
     padding:0;
-    
+
 }
 nav ul li{
     display: block;
@@ -98,7 +98,7 @@ nav div h3{
     display:flex;
     justify-content:center;
     color:white;
-    
+
 }
 
 /*Aktiver Teil der Seite- Anpassen für die aktuelle Seite in HTML benötigt*/
@@ -147,10 +147,10 @@ footer {
     padding-right: 13%;
     padding-top: 0;
     padding-bottom: 0;
-    
+
     margin-top: 100px;
-    
-    
+
+
 }
 
 .impressum {
@@ -168,10 +168,10 @@ footer {
     font-size: 23px;
     color:#000;
     padding: 3px 7px;
-    
+
 }
 #arrowup a{
-    
+
     text-decoration: none;
     color: black;
 }
@@ -188,5 +188,6 @@ footer p {
     font-size: 20px;
     padding: 1em;
     bottom: 0;
+    margin: 0;
 }
 /******/
