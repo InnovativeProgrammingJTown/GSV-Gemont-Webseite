@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
+
+
+
+
+*{
+    margin:0;
+    padding:0;
+    font-family: "Open Sans", sans-serif;
+}
+
+/*Bookmark top*/
+
+#sanfang{
+    visibility: hidden;
+    position: absolute;
+}
+
+/******************************/
+/************Navbar***********/
+
+
+/*mobile-navigation*/
+nav{
+    width:100%;
+    background-color: tomato;
+    height:3.3em;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0,0.16), 0 0 0 1px rgba(0, 0, 0,0.08);
+    /*Funktion: flex für nav-elemente*/
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    /*Funktion: oben hängen bleiben*/
+    position: sticky;
+    position: -webkit -sticky;
+    top:0;
+    z-index: 10;
+}
+
+/*Liste der Dropdown-Links*/
+nav ul{
+    list-style-type: none; 
+    /*Funktion: flex zur einfacheren Bedienbarkeit*/
+    display:flex;
+    flex-direction: column; 
+}
+
+/*Links des Dropdown-Menüs*/
+nav ul li a{
+    text-decoration: none;
+    color:white;
+    display:block;
+    padding:0.7em;   
+}
+
+/*Effekt beim Hovern über einen Link*/
+nav ul li a:hover{
+    background-color: #D9391C;
+}
+
+/*Überschrift der aktuellen Seite*/
+nav h3{
+    margin-top: 0.7em;
+    color:white;
+    font-weight:normal;
+}
+
+/*GeMont-Logo oben rechts*/
+.logonav{
+    margin-top: 0.7em;
+        height: 1.8em;
+}
+#logodesktop{
+    display: none;
+    position: absolute;
+}
+
+/*Container aller dropdown-Elemente*/
+.dropdown{
+    position: relative;
+    display:inline-block;
+}
+
+/*Button der das Dropdown-Menü öffnet*/
+.hamburger {
+  padding: 15px 15px;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: white;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible; 
+}
+
+/*Effekt beim hovern über den Hamburger*/
+.hamburger:hover {
+    opacity: 0.7; 
+}
+
+/*Äußere Hamburger-Span*/
+.hamburger-box {
+  width: 40px;
+  height: 24px;
+  display: inline-block;
+  position: relative; 
+}
+
+/*Innere Hamburger-Span*/
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px; 
+}
+
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    width: 40px;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 4px;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease; 
+}
+.hamburger-inner::before, .hamburger-inner::after {
+    content: "";
+    display: block; 
+}
+.hamburger-inner::before {
+    top: -10px; 
+}
+.hamburger-inner::after {
+    bottom: -10px; }
+
+/*****Hamburgereffekt****/
+.hamburger--slider .hamburger-inner {
+    top: 2px; 
+}
+
+.hamburger--slider .hamburger-inner::before {
+    top: 10px;
+    transition-property: transform, opacity;
+    transition-timing-function: ease;
+    transition-duration: 0.15s; 
+}
+
+.hamburger--slider .hamburger-inner::after {
+    top: 20px; 
+}
+
+.hamburger--slider.is-active .hamburger-inner {
+  transform: translate3d(0, 10px, 0) rotate(45deg); 
+}
+
+.hamburger--slider.is-active .hamburger-inner::before {
+    transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0);
+    opacity: 0; 
+}
+
+.hamburger--slider.is-active .hamburger-inner::after {
+    transform: translate3d(0, -20px, 0) rotate(-90deg); 
+}
+/***************/
+
+/*Inhalt des Dropdowns*/
+.dropdown-content{
+    position: absolute;
+    display:none;
+    width: 20em;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 10;
+    
+}
+
+/*Styling des sichtbaren Dropdowns*/
+.show {
+    
+    display:block;
+    background-color: tomato;
+}
+
+/***************************/
+/*********Content***********/
+
+/*Styling des Wrappers*/
+.wrapper{
+    padding-left:1em;
+    margin-left: 1.5em;
+    margin-top:5em;
+    width:80%;
+}
+
+/*Styling des Timerfensters*/
+#timermobile{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size:0.8em;
+    margin-top:8em;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+    padding: 1em 1.5em 1.5em 16px;
+    text-align: center;
+    margin-bottom: 6em;
+    
+}
+#timerdesktop{
+    display: none;
+    position: absolute;
+}
+.timerbanner{
+    display: none;
+    position: absolute;
+}
+
+/*Flex-Container für Inhalt*/
+.content-container{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;  
+}
+
+/*Festlegung als versteckt*/
+.hidden{
+    display:none;
+}
+
+
+
+/*Container für die beiden Buttons*/
+.Auswahlcontainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/*Button-Styling*/
+.categorychooser{
+    text-align: center;
+    padding: 4em 0.4em;
+    margin: 0.3em;
+    background: white;
+    color: #555;
+    outline: none;
+    border: 1px solid rgba(150,150,150,0.2);
+    margin-top: 0.1em;
+    margin-bottom: 0.8em;
+    transition:     background-color 250ms ease-out;
+    border-radius: 0.8em;
+     
+}
+
+/*Hovereffekt für die Buttons*/
+.categorychooser:hover{
+   background-color: rgba(150,150,150,0.1);
+}
+
+/*Styling ausgewählter Button*/
+.categorychooser:active{
+   background-color: rgba(150,150,150,0.1);
+}
+
+/*Styling jedes einzelnen Reports*/
+.report{
+    margin-bottom: 2em;
+}
+
+/*Bild zum Report*/
+.picturereport{
+    width:100%;
+    margin-top: 1em;
+}
+
+/*Weiterlesen-Link*/
+.readmore{
+    text-decoration: none;
+    color:tomato;
+    font-size:0.9em;    
+    
+}
+
+
+.sidenav{
+    display:none;
+    position: absolute;
+}
+#desktopside{
+    display:none;
+    position: absolute;
+}
+.wrapperdesktopcontent{
+    display: none;
+    position: absolute;
+}
+
+.socialMedia{
+    display: none;
+    position: absolute;
+}
+
+
+/***************************/
+/********Pagination*********/
+
+.pagination{
+    margin-top: 2em;
+}
+
+.pagination ul{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.pagination ul li{
+    padding: 1em;
+    
+}
+
+.pagination ul li a{
+    text-decoration: none;
+    color:black;
+    display:block;
+}
+
+
+
+
+/***************************/
+/**********Footer***********/
+
+footer{
+    background-color: #555555;
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    font-size:0.7em;
+    color:white;
+    height: 7em;
+    margin-top: 3em;
+    position: absolute;
+    bottom:0;
+    
+}
+
+footer a {
+    color: white;
+}
+
+
+/***Zum Seitenanfang***/
+.fas{
+    border: 2px solid #333;
+    border-radius: 1500%;
+    background-color: rgb(1,1,1, 0.1);
+    transition:     background-color 350ms ease-out,
+                    transform        350ms ease-out;
+    margin-bottom: 2px;
+    margin-top: 3px;
+    font-size: 23px;
+    color:#000;
+    padding: 3px 7px;
+    
+}
+.fas a{
+    
+    text-decoration: none;
+    color: black;
+}
+
+.fas:hover{
+    background-color: tomato;
+    transform: scale(1.1);
+}

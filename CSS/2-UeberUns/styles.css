@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
+
+
+
+/*Schriftart und Eliminierung von ungewollten Margins und Paddings*/
+*{
+    
+    margin:0;
+    padding:0;
+    font-family: "Open Sans", sans-serif;
+    box-sizing: border-box;
+    color: #444;
+}
+
+
+
+::-webkit-scrollbar {
+    display: none;
+    position: absolute;
+}
+
+::-webkit-scrollbar:hover {
+    display:inline-block;
+    position: relative;
+}
+
+/***Bookmark Seitenanfang***/
+#sanfang {
+    visibility: hidden;
+    position: absolute;
+}
+/******/
+
+/* Sticky full-width Menubar */
+nav{    
+    
+    width: 100%;
+    position: sticky;
+    position: -webkit -sticky;
+    top:0;
+    font-size:22px;
+    background-color: white;
+    z-index: 7;
+}
+
+
+nav ul{
+    display: flex;
+    flex-direction:row;
+    position: relative;
+    justify-content: center;
+    list-style-type: none;
+    margin:0;
+    padding:0;
+    
+}
+nav ul li{
+    display: block;
+    margin:12px 16px 14px 10px;
+    background-color: white;
+    font-size: 20px;
+}
+
+nav ul li span{
+    display: inline-block;
+    margin-top: 12px;
+}
+
+
+nav ul li span a{
+    text-decoration: none;
+    color:#444;
+}
+
+nav ul li a:hover{
+    color:tomato;
+}
+/*Gemontlogo oben links*/
+.logonav{
+    width:222px;
+    height:50px;
+}
+
+#logomobile{
+    display: none;
+    position: absolute;
+}
+
+nav div h3{
+    display:none;
+    position: absolute;
+}
+#mobilebutton{
+    display:none;
+    position: absolute;
+}
+#timermobile{
+    display:none;
+    position:absolute;
+}
+
+/*Container fürs Timerbanner*/
+#timerdesktop{
+    font-size:0.7em;
+    padding: 0.25em;
+    display:flex;
+    justify-content:center;
+    color:white;
+    
+}
+
+/*Aktiver Teil der Seite- Anpassen für die aktuelle Seite in HTML benötigt*/
+
+.active{
+    color:tomato;
+}
+
+/*Timerbanner in tomato ohne timer*/
+.timerbanner{
+    background-color: tomato;
+    height:30px;
+    width:100%;
+    padding:0;
+    margin:0;
+    clear: both;
+    color:white;
+    z-index: 0;
+}
+
+
+
+
+.landingPage{
+    min-height: 89vh;
+    position: relative;
+    color: #444;
+    display:flex;
+    flex-direction: row;
+}
+
+
+
+.groupImageContainer{
+    width: 59%;
+    height: 100%;
+    display: inline-block;
+    
+    
+}
+
+#groupImage{
+    position: relative;
+    width: 70%;
+    
+    
+    margin: 0 15%;
+}
+
+.groupImageContainer span h2 {
+    position:relative;
+    
+    display: inline-block;
+    color: #444;
+    font-size: 2.8vh;
+    margin-left: 30%;
+    margin-top: 12.5%;
+
+}
+
+.nVorstellung{
+    width: 41%;
+    min-height: 100%;
+    position: relative;
+    right: 0;
+    
+   
+}
+
+.vorstellungContent{
+    
+    width: 85%;
+    margin: 10% 0 0 25px;
+    height: 77.5%;
+    position: relative;
+    overflow: auto;
+    
+    background-color: antiquewhite;
+}
+
+.vorstellungContent h2{
+    padding-top: 5%;
+    text-align: center;
+    padding-bottom: 1%;
+    font-size: 2.4vh;
+    
+}
+.vorstellungContent p{
+    font-size: 1.6vh;
+    margin: 2% 15%;
+    line-height: 150%;
+    
+    
+}
+
+.schuelersprecherVorstellung{
+    margin-bottom: 150px;
+}
+.schuelersprecherVorstellung h2{
+    text-align: center;
+    margin: 0 0 80px 0;
+}
+
+.schuelersprecherListe{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style-type: none;
+    color: #444;
+    
+    padding: 0;
+    
+}
+
+.schuelersprecherListe h3{
+    text-align: center;
+}
+.schuelersprecherImage{
+    width: 50%;
+    height: 15vh;
+    margin: auto;
+}
+
+.schuelersprecherContainer{
+    display: flex;
+    flex-direction: column;
+    max-width: 15vw; 
+}
+
+
+.schuelersprecherBeschreibung{
+    position: relative;
+    width: 100%;
+    margin-top: 15%;
+    height: 40vh;
+    /*background-color:antiquewhite;*/
+    text-align: left;
+    line-height: 150%;
+    font-size: 1.8vh;
+}
+
+.schuelersprecherBeschreibung p span{
+    color: tomato;
+}
+
+
+
+
+
+
+/***Footer***/
+footer {
+    position: relative;
+    bottom: 0;
+    background-color: #666;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 13%;
+    padding-right: 13%;
+    padding-top: 0;
+    padding-bottom: 0;
+    
+    
+    
+    
+}
+
+.impressum {
+    color: white;
+}
+/***Zum Seitenanfang***/
+#arrowup{
+    border: 2px solid #333;
+    border-radius: 1500%;
+    background-color: rgb(1,1,1, 0.1);
+    transition:     background-color 350ms ease-out,
+                    transform        350ms ease-out;
+    margin-bottom: 2px;
+    margin-top: 3px;
+    font-size: 23px;
+    color:#000;
+    padding: 3px 7px;
+    
+}
+#arrowup a{
+    
+    text-decoration: none;
+    color: black;
+}
+
+#arrowup:hover{
+    background-color: tomato;
+    transform: scale(1.1);
+}
+
+
+footer p {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    padding: 1em;
+    bottom: 0;
+}
+/******/
+
+
+.invisibleOnDesktop{
+    display: none;
+    position: absolute;
+}
+
+
+
+

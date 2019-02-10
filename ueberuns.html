@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Über Uns</title>
+    
+    <link rel="stylesheet" href="CSS/2-UeberUns/styles.css" media="screen and (min-width: 1200px) and (max-width: 5000px)">  
+      
+    <!--Stylesheet für Smartphones (10-2018)-->
+    <link rel=stylesheet href="CSS/2-UeberUns/mobileStyles.css" media="screen and (min-width: 200px) and (max-width: 600px)" >
+    
+    <script src="JS/script.js"></script>
+  </head>
+  <body>
+  <!--Bookmark zum Seitenanfang-->
+    <div id="sanfang"> Copyright &copy; Innovative Programming JTown </div>
+    
+    <!--- Navigations-/Menubar-->
+    <nav>
+        
+        <!--DropdownContainer-->
+        <div class="dropdown navElement">
+            
+            <!--Hamburger Button, bei Klick wird Dropdown dargestellt-->
+            <button id="hamburgerButton" onclick="dropDown()"class="hamburger hamburger--slider invisibleOnDesktop" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+            
+            <!--Container für die Elemente der Navbar, in der Desktopvariante klassisch dargestellt-->
+            <div class="dropdown-content" id="myDropdown">
+                
+                
+                
+                <!--Linkliste-->
+                <ul>
+                    
+                    <li><span><a href="Start.html">Startseite</a></span></li>
+                    <li><span><a href="ueberuns.html" class="active">Über Uns</a></span></li>
+                    <li><span><a href="#">Projekte und Inhalte</a></span>
+                    </li>
+                    <li><!--GSV Logo (nur für den Desktop relevant)-->
+                <img src="IMG/gsvGemontLogo.jpg" alt="gemontlogo" class="logonav hiddenMobile" id="logodesktop" ></li>
+                    <li><span><a href="Veranstaltungen.html" >Veranstaltungen</a></span></li>
+                    <li><span><a href="#" >Newsletter</a></span></li>
+                    <li><span><a href='Kontakt.html'>Kontakt</a></span></li>
+                </ul>
+            </div>
+            
+            
+            
+        </div>
+        
+        <!--Name der aktuellen Seite mittig in der Navbar (Tablet&Smartphone)-->
+        <div class="navElement">
+            <h3>Über Uns</h3>
+        </div>
+        
+        <!--GSV Logo Rechts oben in der Navbar (Tablet & Smartphone)-->
+        <div class="navElement">
+            <!--GSV Logo-->
+            <img class="logonav" id="logomobile" src="IMG/gsvGemontLogoWeissTransparent.png" alt="gemontlogo">
+        </div>
+        
+        <!--Container des Timerbanners-->
+        <div class="timerbanner">
+            <!--Timer im Timerbanner-->
+            <div id="timerdesktop"></div>         
+        </div>
+    </nav>
+    
+      
+    <!---------------Page Content---------------------------->
+      
+      <div class="landingPage hiddenOnMobile">
+        <div class="groupImageContainer">
+            
+                <span><h2>Das GSV-Team</h2></span>
+                <img src="IMG/UeberUnsIMG/office-1209640_1920.jpg" alt="Gruppenbild" id="groupImage">
+            
+            
+        </div>
+        
+       
+        <div class="nVorstellung">
+            <div class="vorstellungContent">
+                <h2>Wer sind Wir?</h2>
+                <p id="vorstellung">Lorem ipsum dolor amet listicle sriracha synth iceland keffiyeh truffaut.
+          Tbh ugh humblebrag quinoa direct trade palo santo shoreditch activated charcoal schlitz health goth synth mumblecore freegan scenester.
+          Affogato chambray
+          Lorem ipsum dolor amet listicle sriracha synth iceland keffiyeh truffaut.
+          Tbh ugh humblebrag quinoa direct trade palo santo shoreditch activated charcoal schlitz health goth synth mumblecore freegan scenester.
+          Affogato chambray single-origin coffee craft beer, actually gentrify aesthetic microdosing occupy whatever meh.
+          Cold-pressed man bun mlkshk organic, kickstarter knausgaard enamel pin beard DIY banjo tote bag vegan.
+          Lorem ipsum dolor amet listicle sriracha synth iceland keffiyeh truffaut.
+          Tbh ugh humblebrag quinoa direct trade palo santo shoreditch activated charcoal schlitz health goth synth mumblecore freegan scenester.
+          Affogato chambray single-origin coffee craft beer, actually gentrify aesthetic microdosing occupy whatever meh.
+          </p>
+            </div>
+             
+        </div>
+      </div>
+    
+      <div class="landingPage invisibleOnDesktop">
+        <div class="headingLandingPage">
+            <br>
+            <h3>Das GSV-Team</h3>
+            
+              
+          
+        </div>
+       <div class="groupImageContainer">
+            
+                
+                
+                
+            
+        </div>
+        <div class="nVorstellung">
+            <img src="IMG/UeberUnsIMG/office-1209640_1920.jpg" alt="Gruppenbild" id="groupImage">
+            <div class="vorstellungContent">
+               
+                <p id="vorstellung">Lorem ipsum dolor amet listicle sriracha synth iceland keffiyeh truffaut.
+          Tbh ugh humblebrag quinoa direct trade palo santo shoreditch activated charcoal schlitz health goth synth mumblecore freegan scenester.
+          Affogato chambray
+          Lorem ipsum dolor amet listicle sriracha synth iceland keffiyeh truffaut.
+          Tbh ugh humblebrag quinoa direct trade palo santo shoreditch activated charcoal schlitz health goth synth mumblecore freegan scenester.
+          Affogato chambray single-origin coffee craft beer, actually gentrify aesthetic microdosing occupy whatever meh.
+          Cold-pressed man bun mlkshk organic, kickstarter knausgaard enamel pin beard DIY banjo tote bag vegan.
+          
+          </p>
+            </div>
+             
+        </div>
+          
+        
+      </div>
+      
+    
+  
+  
+    <div class="schuelersprecherVorstellung">
+        <h3 class="invisibleOnDesktop">Unsere Schulsprecher</h3>
+        <h2 class="hiddenOnMobile">Unsere Schulsprecher</h2>
+        <ul class="schuelersprecherListe">
+            <li>
+                <h4 class="invisibleOnDesktop">Charlotte Ritter</h4>
+                <div class="schuelersprecherContainer">
+                    <h3 class="hiddenOnMobile">Charlotte Ritter</h3>
+                    <img src="IMG/UeberUnsIMG/portrait1.jpg" class="schuelersprecherImage"> 
+                    <div class="schuelersprecherBeschreibung">
+                        <p>
+                            <span>Klasse:</span>
+                            <br>
+                            3c
+                            <br>
+                            <span>Hobbys: </span>
+                            <br>
+                            Lorem, Ipsum, Dolor, Sit, Amet
+
+                            <br>
+                            <span>Ziele: </span>
+                            <br>
+                            Lorem, Ipsum, Dolor, Sit, Amet
+                            <br>
+                            <span>Projekte: </span>
+                            <br>
+                            Lorem, Ipsum, Dolor, Sit, Amet
+                            <br>
+                            <span>Motivation:</span>
+                            <br>
+                            A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.
+                        </p>
+                    </div> 
+
+
+                </div>
+            </li>  
+            <li>
+                <h4 class="invisibleOnDesktop">Friedrich Erhardt</h4>
+                <div class="schuelersprecherContainer">
+                    <h3 class="hiddenOnMobile">Friedrich Erhardt</h3>
+                    <img src="IMG/UeberUnsIMG/portrait2.jpg" class="schuelersprecherImage"> 
+                    <div class="schuelersprecherBeschreibung">
+                        <p>
+                            <span>Klasse:</span>
+                            <br class="hiddenOnMobile">
+                            3c
+                            <br>
+                            <span>Hobbys: </span>
+                            <br class="hiddenOnMobile">
+                            Lorem, Ipsum, Dolor, Sit, Amet
+
+                            <br>
+                            <span>Ziele: </span>
+                            <br class="hiddenOnMobile">
+                            Lorem, Ipsum, Dolor, Sit, Amet
+                            <br >
+                            <span>Projekte: </span>
+                            <br class="hiddenOnMobile"> 
+                            Lorem, Ipsum, Dolor, Sit, Amet
+                            <br>
+                            <span>Motivation:</span>
+                            <br class="hiddenOnMobile">
+                            Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast.
+
+                        </p>
+                    </div> 
+
+                </div>
+            </li>
+            <li>
+                <h4 class="invisibleOnDesktop">Leah Köppe  </h4>
+                <div class="schuelersprecherContainer">
+                    <h3 class="hiddenOnMobile">Leah Köppe</h3>
+                    <img src="IMG/UeberUnsIMG/portrait3.jpg" class="schuelersprecherImage"> 
+                    <div class="schuelersprecherBeschreibung">
+                        <p>
+                            <span>Klasse:</span>
+                            <br>
+                            3c
+                            <br>
+                            <span>Hobbys: </span>
+                            <br>
+                            Lorem, Ipsum, Dolor, Sit, Amet
+
+                            <br>
+                            <span>Ziele: </span>
+                            <br>
+                            Lorem, Ipsum, Dolor, Sit, Amet
+                            <br>
+                            <span>Projekte: </span>
+                            <br>
+                            Lorem, Ipsum, Dolor, Sit, Amet
+                            <br>
+                            <span>Motivation:</span>
+                            <br>
+                            One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like.
+                        </p>
+                    </div>  
+
+
+                </div>
+            </li>
+        </ul>
+    </div>
+     
+      
+      
+      
+      
+    <footer id="footer">
+        
+        <!--Impressum-->
+        <div><p> <a href="#" class="impressum">Impressum</a></p></div>
+        
+        <!--Copyright-->
+        
+        <div><p>Copyright &copy; Innovative Programming JTown</p></div>
+        
+        <!--Zum Seitenanfang-->
+        <p><a href="#sanfang"><i id="arrowup" class="fas fa-angle-up"></i></a></p>
+    </footer>
+
+  </body>
+</html>
