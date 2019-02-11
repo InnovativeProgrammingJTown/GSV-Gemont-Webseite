@@ -12,6 +12,11 @@ body{
 
 }
 
+.hiddenOnDesktop{
+  display:none;
+  position: absolute;
+}
+
 ::-webkit-scrollbar {
 display: none;
 }
@@ -82,7 +87,7 @@ nav div h3{
     display:none;
     position: absolute;
 }
-#mobilebutton{
+#hamburgerButton{
     display:none;
     position: absolute;
 }

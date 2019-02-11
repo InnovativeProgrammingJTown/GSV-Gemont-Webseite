@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!--Stylesheet für Smartphones (10-2018)-->
-    <link rel=stylesheet href="#" media="screen and (min-width: 200px) and (max-width: 600px)" >
+    <link rel=stylesheet href="css/5-Newsletter/newsletterMobile.css" media="screen and (min-width: 200px) and (max-width: 600px)" >
 
     <!--Stylesheet für Tablets (10-2018)-->
     <link rel="stylesheet" href="#" media="screen and (min-width: 601px) and (max-width: 1000px)">
@@ -53,7 +53,7 @@
         <div class="dropdown">
 
             <!--Hamburger Button, bei Klick wird Dropdown dargestellt-->
-            <button id="mobilebutton" onclick="dropDown()"class="hamburger hamburger--slider" type="button">
+            <button id="hamburgerButton" onclick="dropDown()"class="hamburger hamburger--slider" type="button">
                 <span class="hamburger-box">
                     <span class="hamburger-inner"></span>
                 </span>
@@ -105,15 +105,18 @@
 
     <div class="wrapper">
       <h2>Unser Newsletter!</h2>
+      <br class="hiddenOnDesktop">
       <p>Du möchtest mehr über die GSV und unsere Arbeit erfahren? Dann abonniere hier unseren Newsletter und erhalte regelmäßig Informationen zu unserer neuesten Beschlüssen, Projekten und vielem mehr!</p>
       <form action="newsletter.php" class="e-mail-form" method="post">
         <div class="email-box">
           <i class="fas fa-envelope"></i>
-          <input type="email" id="e-mail" class="e-mail-form input" name="eMail" value="" placeholder="Deine Email Adresse...">
-          <input type="submit" class="e-mail-form submit" name="submitBtn" value="Abonnieren">
+          <input type="email" id="e-mail" class="e-mail-form input" name="eMail" value="" placeholder="Deine Email...">
+
+          <input type="submit" class="e-mail-form submit hiddenOnMobile" name="submitBtn" value="Abonnieren">
 
         </div>
-
+        <br class="hiddenOnDesktop">
+        <input type="submit" class="e-mail-form submit hiddenOnDesktop" name="submitBtn" value="Abonnieren">
       </form>
     </div>
 
