@@ -1,16 +1,23 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 @import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
 @import url('https://fonts.googleapis.com/css?family=Roboto');
-
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 /*Schriftart und Eliminierung von ungewollten Margins und Paddings*/
-body{
+*{
 
     margin:0;
     padding:0;
     font-family: "Open Sans", sans-serif;
-    box-sizing: border-box;
+
 
 }
+
+.hiddenOnDesktop{
+  display:none;
+  position: absolute;
+}
+
+
 
 ::-webkit-scrollbar {
 display: none;
@@ -66,6 +73,7 @@ nav ul li span a{
 
 nav ul li a:hover{
     color:tomato;
+    text-decoration: none;
 }
 /*Gemontlogo oben links*/
 .logonav{
@@ -78,11 +86,11 @@ nav ul li a:hover{
     position: absolute;
 }
 
-nav div h3{
+nav div h5{
     display:none;
     position: absolute;
 }
-#mobilebutton{
+#hamburgerButton{
     display:none;
     position: absolute;
 }
@@ -125,14 +133,201 @@ nav div h3{
     width: 100%;
     text-align: center;
     color: #444;
-    height: 680px;
+    height: 200vh;
+    padding: 0;
+    margin: 0;
+    overflow:hidden;
 }
 
-.wrapper h2{
-    font-weight:100;
-    font-size: 22px;
+
+
+
+.slideContainer {
+  width: 100vw;
+  display: flex;
+  padding: 0;
+  margin: 0;
+
+}
+.carousel {
+  width: 100vw;
+  height: 85vh;
+  border-radius: 2px;
+  background: #fff;
+  /* box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), 0 4px 10px rgba(0, 0, 0, 0.1); */
+  margin: 0;
+  padding: 0;
+}
+.slider {
+  display: flex;
+  height: 100%;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+.slider div {
+
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: 20px;
+  height: inherit;
+}
+.slider div img{
+  position: relative  ;
+  margin: 0;
+  padding: 0;
+  height: 85vh;
+  width: 100vw;
+
+
+}
+.left, .right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.arrow i {
+  font-size: 70px;
+  -webkit-user-select: none;
+  color: #ddd;
+}
+.left {
+  left: 10px;
+}
+.right {
+  right: 10px;
+}
+.control{
+  display: inline-block;
+}
+.control ul {
+  list-style: none;
+  display: flex;
+  position: absolute;
+  bottom: 2%;
+  left: 51%;
+  margin: 0;
+  padding: 0;
+  transform: translate(-50%);
+  z-index: 6;
+}
+.control ul li {
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  margin: 10px;
+  cursor: pointer;
+  z-index: 6;
+}
+.control ul li.selected {
+  background: #333;
 }
 
+.mottoBanner{
+  height: 20vh;
+  width: 100%;
+  border-top: 3px solid tomato;
+  padding-top: 6px;
+  background: #fff;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mottoBanner span{
+  font-size: 3.5vh;
+  font-style: : italic;
+  font-family: cursive;
+
+}
+
+.newsContainer{
+  display: flex;
+  overflow: hidden;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 200%;
+
+
+}
+
+.newsContainer div{
+  width: 100%;
+}
+
+
+.newsList{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  width: 100%;
+  position: relative;
+  list-style-type: none;
+  text-decoration: none;
+  text-align: center;
+
+}
+
+.newsList li{
+  width: 250px;
+
+}
+
+.newsList li img{
+  width: 250px;
+  height: 200px;
+}
+
+.newsList li span{
+  width: 103%;
+  text-align: left;
+  padding: 5% 10%;
+  background: #eee;
+  display: block
+}
+
+.navArrows{
+  height: 40px;
+  width: 100%;
+
+  position: relative;
+}
+.navArrows div{
+  width: 8%;
+
+  display: flex;
+  position: absolute;
+  right: 4%;
+}
+.navArrows div button{
+  height: 100%;
+  width: 100%;
+  background: tomato;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+  margin-right: 2px;
+
+
+}
+
+
+
+.navArrows div button a{
+  color: #fff;
+  text-decoration: none;
+
+}
+
+.navArrows div button a:active{
+  text-decoration: none;
+}
 
 
 /***Footer***/
@@ -145,9 +340,6 @@ footer {
     justify-content: space-between;
     padding-left: 13%;
     padding-right: 13%;
-    padding-top: 0;
-    padding-bottom: 0;
-
     margin-top: 100px;
 
 

@@ -3,9 +3,11 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 /*Schriftart und Eliminierung von ungewollten Margins und Paddings*/
-body{
-    height: 100%;
-    position: relative;
+*{
+  margin:0;
+  padding:0;
+  font-family: "Open Sans", sans-serif;
+  box-sizing: border-box;
 
 
 }
@@ -14,12 +16,6 @@ body{
   position: absolute;
 }
 
-*{
-    margin:0;
-    padding:0;
-    font-family: "Open Sans", sans-serif;
-    box-sizing: border-box;
-}
 
 ::-webkit-scrollbar {
 display: none;
@@ -91,7 +87,7 @@ nav div h3{
     display:none;
     position: absolute;
 }
-#mobilebutton{
+#hamburgerButton{
     display:none;
     position: absolute;
 }
@@ -134,7 +130,7 @@ nav div h3{
     height: 71.4vh;
     width: 66%;
     margin: 0 auto;
-    font: ;
+    font-size: 15px;
 }
 
 .contactIntro{
@@ -194,7 +190,7 @@ form .submit:hover{
 
 /***Footer***/
 footer {
-
+    width: 100%;
     bottom: 0;
     background-color: #666;
     display: flex;
@@ -202,17 +198,11 @@ footer {
     justify-content: space-between;
     padding-left: 13%;
     padding-right: 13%;
-    padding-top: 0;
-    padding-bottom: 0;
-
-
 
 
 }
 
-.impressum {
-    color: white;
-}
+
 /***Zum Seitenanfang***/
 #arrowup{
     border: 2px solid #333;
@@ -239,11 +229,11 @@ footer {
 }
 
 
-footer p {
+footer p, footer a {
     text-align: center;
     color: white;
     font-size: 20px;
     padding: 1em;
-    bottom: 0;
+    
 }
 /******/

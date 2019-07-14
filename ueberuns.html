@@ -10,7 +10,17 @@
     <!--Stylesheet für Smartphones (10-2018)-->
     <link rel=stylesheet href="CSS/2-UeberUns/mobileStyles.css" media="screen and (min-width: 200px) and (max-width: 600px)" >
 
-    <script src="JS/script.js"></script>
+    <!--Icon Einbindung-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+    <!--JQuery Einbindung-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!--Icon Einbindung-->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+
+
   </head>
   <body>
   <!--Bookmark zum Seitenanfang-->
@@ -39,8 +49,8 @@
 
                     <li><span><a href="Start.html">Startseite</a></span></li>
                     <li><span><a href="ueberuns.html" class="active">Über Uns</a></span></li>
-                    <li><span><a href="#">Projekte und Inhalte</a></span>
-                    </li>
+                    <!-- <li><span><a href="#">Projekte und Inhalte</a></span>
+                    </li> -->
                     <li><!--GSV Logo (nur für den Desktop relevant)-->
                 <img src="IMG/gsvGemontLogo.jpg" alt="gemontlogo" class="logonav hiddenMobile" id="logodesktop" ></li>
                     <li><span><a href="Veranstaltungen.html" >Veranstaltungen</a></span></li>
@@ -54,12 +64,12 @@
         </div>
 
         <!--Name der aktuellen Seite mittig in der Navbar (Tablet&Smartphone)-->
-        <div class="navElement">
+        <div class="navElement navUeberschrift">
             <h3>Über Uns</h3>
         </div>
 
         <!--GSV Logo Rechts oben in der Navbar (Tablet & Smartphone)-->
-        <div class="navElement">
+        <div class="navElement divLogoNav">
             <!--GSV Logo-->
             <img class="logonav" id="logomobile" src="IMG/gsvGemontLogoWeissTransparent.png" alt="gemontlogo">
         </div>
@@ -263,6 +273,6 @@
         <!--Zum Seitenanfang-->
         <p><a href="#sanfang"><i id="arrowup" class="fas fa-angle-up"></i></a></p>
     </footer>
-
+    <script src="JS/script.js"></script>
   </body>
 </html>

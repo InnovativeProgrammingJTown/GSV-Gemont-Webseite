@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 /*Schriftart und Eliminierung von ungewollten Margins und Paddings*/
-body{
+*{
 
     margin:0;
     padding:0;
@@ -127,11 +127,11 @@ nav div h3{
 
 
 .wrapper{
+    height: 58.4vh;
     width: 66%;
     margin: 0 auto;
     text-align: center;
     color: #444;
-    height: 57.8vh;
     font-size: 15px;
 }
 
@@ -165,6 +165,9 @@ nav div h3{
 .email-box .submit{
   background: #ff6347;
   color: #fff;
+  padding: 2px 15px;
+  text-align: center;
+  align-items: center;
 }
 
 .email-box .submit:hover{
@@ -174,6 +177,7 @@ nav div h3{
 
 /***Footer***/
 footer {
+    width: 100%;
 
     bottom: 0;
     background-color: #666;
@@ -182,17 +186,11 @@ footer {
     justify-content: space-between;
     padding-left: 13%;
     padding-right: 13%;
-    padding-top: 0;
-    padding-bottom: 0;
-
-
-
 
 }
 
-.impressum {
-    color: white;
-}
+
+
 /***Zum Seitenanfang***/
 #arrowup{
     border: 2px solid #333;
@@ -219,12 +217,12 @@ footer {
 }
 
 
-footer p {
+footer p, footer a {
     text-align: center;
     color: white;
     font-size: 20px;
     padding: 1em;
-    bottom: 0;
-    margin: 0;
+
+
 }
 /******/

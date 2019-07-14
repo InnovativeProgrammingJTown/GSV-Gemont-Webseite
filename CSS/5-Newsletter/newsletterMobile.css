@@ -1,12 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 @import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
 
-
-
-
-
-
-
 /*Schriftart und Eliminierung von ungewollten Margins und Paddings*/
 *{
 
@@ -17,6 +11,11 @@
     color: #444;
 }
 
+.hiddenOnMobile{
+    display:none;
+    position: absolute;
+}
+
 /*Bookmark top*/
 
 #sanfang{
@@ -24,8 +23,10 @@
     position: absolute;
 }
 
-/******************************/
+/* --------------------------------------------------------------------------------------------------------- */
 /************Navbar***********/
+
+
 
 
 /*mobile-navigation*/
@@ -37,7 +38,7 @@ nav{
     /*Funktion: flex für nav-elemente*/
     display:flex;
     flex-direction: row;
-    justify-content: space-between;
+
 
     /*Funktion: oben hängen bleiben*/
     position: sticky;
@@ -45,8 +46,10 @@ nav{
     top:0;
     z-index: 10;
 }
+
+/*Liste, Überschrift und Bild nehmen je ein Drittel der Navbar ein*/
 .navElement{
-    width: 33%;
+    width: 33.333%;
 }
 
 /*Liste der Dropdown-Links*/
@@ -75,13 +78,19 @@ nav h3{
     margin-top: 0.7em;
     color:white;
     font-weight:normal;
+    text-align: center;
 }
 
+/* Logo oben rechts wird am rechten Rand seines Divs angeordnet */
+.divLogoNav{
+  text-align: right;
+}
 /*GeMont-Logo oben rechts*/
 .logonav{
     margin-top: 0.7em;
         height: 1.8em;
 }
+/* Desktoplogo soll nicht angezeigt werden */
 #logodesktop{
     display: none;
     position: absolute;
@@ -92,6 +101,9 @@ nav h3{
     position: relative;
     display:inline-block;
 }
+
+/* ------------------------------------------------------------------------------------------------------------- */
+
 
 /*Button der das Dropdown-Menü öffnet*/
 .hamburger {
@@ -130,6 +142,7 @@ nav h3{
   margin-top: -2px;
 }
 
+/* Hamburger-Striche */
 .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
     width: 40px;
     height: 4px;
@@ -144,6 +157,8 @@ nav h3{
     content: "";
     display: block;
 }
+
+/* Anordnung des oberen und unteren Strichs */
 .hamburger-inner::before {
     top: -10px;
 }
@@ -192,27 +207,28 @@ nav h3{
 
 /*Styling des sichtbaren Dropdowns*/
 .show {
-
     display:block;
     background-color: tomato;
 }
 
+/* --------------------------------------------------------------------------------------------------------- */
+
+
+
+/* Styling des Wrapper */
 .wrapper{
     width: 66%;
-    margin: 0 auto;
+    margin: 15vh auto;
+    padding: 0;
 
     color: #444;
     height: 59.2vh;
     font-size: 15px;
 }
 
-.wrapper h2{
-  margin-top: 15vh;
-}
 
 .email-box{
   display:flex;
-
   height: 5vh;
   margin-top: 5vh;
 }
@@ -233,7 +249,7 @@ nav h3{
   background: transparent;
   border-bottom: 1px solid #999;
   color: #444;
-  font-size: 2vh;
+  font-size: 15px;
 }
  .submit{
   background: #ff6347;
@@ -263,19 +279,19 @@ footer{
     font-size:0.7em;
     color:white;
     height: 7em;
-    margin-top: 3em;
+
     position: relative;
     bottom:0;
 
 }
 
-footer a {
+footer a, footer p{
     color: white;
 }
 
 
 /***Zum Seitenanfang***/
-.fa-angle-up{
+#arrowup{
     border: 2px solid #333;
     border-radius: 1500%;
     background-color: rgb(1,1,1, 0.1);
@@ -288,22 +304,13 @@ footer a {
     padding: 3px 7px;
 
 }
-.fa-angle-up a{
+#arrowup a{
 
     text-decoration: none;
     color: black;
 }
 
-.fa-angle-up:hover{
+#arrowup:hover{
     background-color: tomato;
     transform: scale(1.1);
-}
-
-
-
-
-
-.hiddenOnMobile{
-    display:none;
-    position: absolute;
 }

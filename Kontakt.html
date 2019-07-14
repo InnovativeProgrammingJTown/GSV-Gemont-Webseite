@@ -39,7 +39,7 @@
 
 
 <body>
-    <!-------------Javascript-Skripte------------->
+
     <!--Bookmark zum Seitenanfang-->
     <div id="sanfang"> Copyright &copy; Innovative Programming JTown </div>
 
@@ -47,10 +47,10 @@
     <nav>
 
         <!--DropdownContainer-->
-        <div class="dropdown">
+        <div class="dropdown navElement">
 
             <!--Hamburger Button, bei Klick wird Dropdown dargestellt-->
-            <button id="mobilebutton" onclick="dropDown()"class="hamburger hamburger--slider" type="button">
+            <button id="hamburgerButton" onclick="dropDown()"class="hamburger hamburger--slider" type="button">
                 <span class="hamburger-box">
                     <span class="hamburger-inner"></span>
                 </span>
@@ -66,8 +66,8 @@
 
                     <li><span><a href="Start.html">Startseite</a></span></li>
                     <li><span><a href="ueberuns.html">Über Uns</a></span></li>
-                    <li><span><a href="#">Projekte und Inhalte</a></span>
-                    </li>
+                    <!-- <li><span><a href="#">Projekte und Inhalte</a></span>
+                    </li> -->
                     <li><!--GSV Logo (nur für den Desktop relevant)-->
                 <img src="IMG/gsvGemontLogo.jpg" alt="gemontlogo" class="logonav" id="logodesktop" ></li>
                     <li><span><a href="Veranstaltungen.html" >Veranstaltungen</a></span></li>
@@ -75,34 +75,15 @@
                     <li><span><a href="Kontakt.html" class="active">Kontakt</a></span></li>
                 </ul>
             </div>
-
-            <!--Javascript-Skript für den Hamburger-Button-->
-            <script>
-
-                // Look for .hamburger
-                var hamburger = document.querySelector(".hamburger");
-
-                // On click
-                hamburger.addEventListener("click", function() {
-
-                    // Toggle class "is-active"
-                    hamburger.classList.toggle("is-active");
-
-                    /* When the user clicks on the button, toggle between hiding and showing the dropdown content */
-                    document.getElementById("myDropdown").classList.toggle("show");
-                });
-            </script>
-
-
         </div>
 
         <!--Name der aktuellen Seite mittig in der Navbar (Tablet&Smartphone)-->
-        <div>
-            <h3>Veranstaltungen</h3>
+        <div class="navElement">
+            <h3>Kontakt</h3>
         </div>
 
         <!--GSV Logo Rechts oben in der Navbar (Tablet & Smartphone)-->
-        <div>
+        <div class="divLogoNav navElement">
             <!--GSV Logo-->
             <img class="logonav" id="logomobile" src="IMG/gsvGemontLogoWeissTransparent.png" alt="gemontlogo">
         </div>
@@ -131,7 +112,7 @@
 
         </div>
 
-        <br class="hiddenOnDesktop">
+        <br>
 
         <form class="contact-form" method="post" action="contact.php" >
 
@@ -163,10 +144,11 @@
     </footer>
 
 
-
+    <script src="JS/script.js"></script>
 
 
 
 
 
 </body>
+</html>

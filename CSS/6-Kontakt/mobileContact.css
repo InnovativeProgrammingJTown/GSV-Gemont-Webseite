@@ -9,13 +9,19 @@
 
 /*Schriftart und Eliminierung von ungewollten Margins und Paddings*/
 *{
-    
+
     margin:0;
     padding:0;
     font-family: "Open Sans", sans-serif;
     box-sizing: border-box;
     color: #444;
 }
+
+.hiddenOnMobile{
+    display:none;
+    position: absolute;
+}
+
 
 /*Bookmark top*/
 
@@ -37,8 +43,8 @@ nav{
     /*Funktion: flex für nav-elemente*/
     display:flex;
     flex-direction: row;
-    justify-content: space-around;
-    
+    justify-content: space-between;
+
     /*Funktion: oben hängen bleiben*/
     position: sticky;
     position: -webkit -sticky;
@@ -46,15 +52,15 @@ nav{
     z-index: 10;
 }
 .navElement{
-    width: 33%;
+    width: 33.3333%;
 }
 
 /*Liste der Dropdown-Links*/
 nav ul{
-    list-style-type: none; 
+    list-style-type: none;
     /*Funktion: flex zur einfacheren Bedienbarkeit*/
     display:flex;
-    flex-direction: column; 
+    flex-direction: column;
 }
 
 /*Links des Dropdown-Menüs*/
@@ -62,7 +68,7 @@ nav ul li a{
     text-decoration: none;
     color:white;
     display:block;
-    padding:0.7em;   
+    padding:0.7em;
 }
 
 /*Effekt beim Hovern über einen Link*/
@@ -75,6 +81,12 @@ nav h3{
     margin-top: 0.7em;
     color:white;
     font-weight:normal;
+    text-align: center;
+}
+
+
+.divLogoNav{
+  text-align: right;
 }
 
 /*GeMont-Logo oben rechts*/
@@ -95,7 +107,7 @@ nav h3{
 
 /*Button der das Dropdown-Menü öffnet*/
 .hamburger {
-  padding: 15px 15px;
+  padding: 15px 15px 8.5px 15px;
   display: inline-block;
   cursor: pointer;
   transition-property: opacity, filter;
@@ -107,12 +119,12 @@ nav h3{
   background-color: transparent;
   border: 0;
   margin: 0;
-  overflow: visible; 
+  overflow: visible;
 }
 
 /*Effekt beim hovern über den Hamburger*/
 .hamburger:hover {
-    opacity: 0.7; 
+    opacity: 0.7;
 }
 
 /*Äußere Hamburger-Span*/
@@ -120,14 +132,14 @@ nav h3{
   width: 40px;
   height: 24px;
   display: inline-block;
-  position: relative; 
+  position: relative;
 }
 
 /*Innere Hamburger-Span*/
 .hamburger-inner {
   display: block;
   top: 50%;
-  margin-top: -2px; 
+  margin-top: -2px;
 }
 
 .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
@@ -138,45 +150,45 @@ nav h3{
     position: absolute;
     transition-property: transform;
     transition-duration: 0.15s;
-    transition-timing-function: ease; 
+    transition-timing-function: ease;
 }
 .hamburger-inner::before, .hamburger-inner::after {
     content: "";
-    display: block; 
+    display: block;
 }
 .hamburger-inner::before {
-    top: -10px; 
+    top: -10px;
 }
 .hamburger-inner::after {
     bottom: -10px; }
 
 /*****Hamburgereffekt****/
 .hamburger--slider .hamburger-inner {
-    top: 2px; 
+    top: 2px;
 }
 
 .hamburger--slider .hamburger-inner::before {
     top: 10px;
     transition-property: transform, opacity;
     transition-timing-function: ease;
-    transition-duration: 0.15s; 
+    transition-duration: 0.15s;
 }
 
 .hamburger--slider .hamburger-inner::after {
-    top: 20px; 
+    top: 20px;
 }
 
 .hamburger--slider.is-active .hamburger-inner {
-  transform: translate3d(0, 10px, 0) rotate(45deg); 
+  transform: translate3d(0, 10px, 0) rotate(45deg);
 }
 
 .hamburger--slider.is-active .hamburger-inner::before {
     transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0);
-    opacity: 0; 
+    opacity: 0;
 }
 
 .hamburger--slider.is-active .hamburger-inner::after {
-    transform: translate3d(0, -20px, 0) rotate(-90deg); 
+    transform: translate3d(0, -20px, 0) rotate(-90deg);
 }
 /***************/
 
@@ -187,28 +199,28 @@ nav h3{
     width: 20em;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 10;
-    
+
 }
 
 /*Styling des sichtbaren Dropdowns*/
 .show {
-    
+
     display:block;
     background-color: tomato;
 }
 
 
 .wrapper{
-    height: 80vh;
+    height: 100vh;
     width: 66%;
     margin: 0 auto;
-    
+
 }
 
 .contactIntro{
     font-family: "Open Sans", sans-serif;
-    font-size: 2vh;
-    margin-top: 50px;
+    font-size: 15px;
+    margin-top: 12vh;
     color: #333;
 }
 
@@ -222,8 +234,9 @@ form{
     background: transparent;
     border-bottom: 1px solid #999;
     color: #444;
-    font-size: 2vh;
-    
+    font-size: 15px;
+    margin-top: 7px;
+
 }
 
 input{
@@ -260,7 +273,7 @@ form .submit{
 form .submit:hover{
     background-color: #F03B1A;
     cursor: pointer;
-    
+
 }
 
 
@@ -277,20 +290,18 @@ footer{
     font-size:0.7em;
     color:white;
     height: 7em;
-    margin-top: 3em;
+    margin-top: 0;
     position: relative;
     bottom:0;
-    
+
 }
 
-footer a, footer p {
-    color: white;
-}
+
 
 
 
 /***Zum Seitenanfang***/
-.fas{
+#arrowup{
     border: 2px solid #333;
     border-radius: 1500%;
     background-color: rgb(1,1,1, 0.1);
@@ -301,27 +312,20 @@ footer a, footer p {
     font-size: 23px;
     color:#000;
     padding: 3px 7px;
-    
+
 }
-.fas a{
-    
+#arrowup a{
+
     text-decoration: none;
     color: black;
 }
 
-.fas:hover{
+#arrowup:hover{
     background-color: tomato;
     transform: scale(1.1);
 }
 
 
-
-
-
-.hiddenOnMobile{
-    display:none;
-    position: absolute;
+footer a, footer p {
+    color: white;
 }
-
-
-

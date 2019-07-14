@@ -13,15 +13,16 @@
 
     <!--Anpassung an Bildschirmgröße-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <!--Stylesheet für Smartphones (10-2018)-->
-    <link rel=stylesheet href="#" media="screen and (min-width: 200px) and (max-width: 600px)" >
+    <link rel=stylesheet href="CSS/1-Start/startMobile.css" media="screen and (min-width: 200px) and (max-width: 600px)" >
 
     <!--Stylesheet für Tablets (10-2018)-->
-    <link rel="stylesheet" href="#" media="screen and (min-width: 601px) and (max-width: 1000px)">
+    <link rel="stylesheet" href="#" media="screen and (min-width: 601px) and (max-width: 1000px)" >
 
     <!--Stylesheet für Desktops (10-2018)-->
-    <link rel="stylesheet" href="CSS/1-Start/start.css" media="screen and (min-width: 1000px) and (max-width: 5000px)">
+    <link rel="stylesheet" href="CSS/1-Start/start.css" media="screen and (min-width: 1000px) and (max-width: 5000px)" >
 
     <!--Icon Einbindung-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
@@ -32,14 +33,14 @@
     <!--Icon Einbindung-->
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
-    <script src="JS/script.js"></script>
+
 
 
 </head>
 
 
 <body>
-    <!-------------Javascript-Skripte------------->
+
 
 
 
@@ -50,10 +51,10 @@
     <nav>
 
         <!--DropdownContainer-->
-        <div class="dropdown">
+        <div class="dropdown navElement">
 
             <!--Hamburger Button, bei Klick wird Dropdown dargestellt-->
-            <button id="mobilebutton" onclick="dropDown()"class="hamburger hamburger--slider" type="button">
+            <button id="hamburgerButton" onclick="dropDown()"class="hamburger hamburger--slider" type="button">
                 <span class="hamburger-box">
                     <span class="hamburger-inner"></span>
                 </span>
@@ -69,8 +70,8 @@
 
                     <li><span><a href="Start.html" class="active">Startseite</a></span></li>
                     <li><span><a href="ueberuns.html">Über Uns</a></span></li>
-                    <li><span><a href="#">Projekte und Inhalte</a></span>
-                    </li>
+                    <!-- <li><span><a href="#">Projekte und Inhalte</a></span>
+                    </li> -->
                     <li><!--GSV Logo (nur für den Desktop relevant)-->
                 <img src="IMG/gsvGemontLogo.jpg" alt="gemontlogo" class="logonav" id="logodesktop" ></li>
                     <li><span><a href="Veranstaltungen.html" >Veranstaltungen</a></span></li>
@@ -83,12 +84,12 @@
         </div>
 
         <!--Name der aktuellen Seite mittig in der Navbar (Tablet&Smartphone)-->
-        <div>
-            <h3>Veranstaltungen</h3>
+        <div class="navElement">
+            <h5>Start</h5>
         </div>
 
         <!--GSV Logo Rechts oben in der Navbar (Tablet & Smartphone)-->
-        <div>
+        <div class="navElement divLogoNav">
             <!--GSV Logo-->
             <img class="logonav" id="logomobile" src="IMG/gsvGemontLogoWeissTransparent.png" alt="gemontlogo">
         </div>
@@ -104,19 +105,142 @@
 
 
     <div class="wrapper">
-        <br>
-        <br>
-        <h2>Herzlich Wilkommen auf der offiziellen Webseite der GSV des Gebrüder Montgolfier-Gymnasiums!</h2>
-        <br>
-        <br>
+      <div class="slideContainer">
+        <div class="carousel">
+          <div class="slider">
 
+            <div><img src="IMG\switzerland-1920x1080-4k-5k-wallpaper-alps-mountains-stars-night-5713.jpg" alt=""></div>
+            <div><img src="IMG\digital_space_universe_4k_8k.jpg" alt=""></div>
+            <div><img src="IMG\nature_cloud_ocean_cliff_landscape_city_paris_ultrahd_4k_wallpaper_1920x1080.jpg" alt=""></div>
+            <div><img src="IMG\46fceacf44dcc4ee00501ca2891d9814.jpg" alt=""></div>
+          </div>
+          <div class="control">
+            <span class="arrow left">
+              <i class="material-icons">
+              keyboard_arrow_left
+              </i>
+            </span>
+            <span class="arrow right">
+              <i class="material-icons">
+              keyboard_arrow_right
+              </i>
+            </span>
+            <ul>
+              <li class="selected"></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="mottoBanner" >
+        <span>Freiheit, Freude und Demokratie</span>
+      </div>
+      <hr id="news">
+      <br>
+      <br>
+      <h5 >Das Neueste</h5>
+      <br>
+      <br>
+
+      <div class="newsContainer">
+        <div >
+          <ul class="newsList" >
+            <li>
+              <img src="IMG\VeranstaltungenIMG\office-1209640_1920.jpg" alt="">
+              <br>
+              <br>
+              <h6>GSV-Workshop</h6>
+              <br>
+              <p>Lorem ipsum dolor amet raclette drinking vinegar echo park kitsch biodiesel, wolf yr copper mug wayfarers scenester franzen.</p>
+              <span> 10.03.2019</span>
+            </li>
+            <li><img src="IMG\VeranstaltungenIMG\office-1209640_1920.jpg" alt="">
+            <br>
+            <br>
+            <h6>GSV-Workshop</h6>
+            <br>
+            <p>Lorem ipsum dolor amet raclette drinking vinegar echo park kitsch biodiesel, wolf yr copper mug wayfarers scenester franzen.</p>
+            <span> 10.03.2019</span>
+          </li>
+            <li>
+              <img src="IMG\VeranstaltungenIMG\office-1209640_1920.jpg" alt="">
+              <br>
+              <br>
+              <h6>GSV-Workshop</h6>
+              <br>
+              <p>Lorem ipsum dolor amet raclette drinking vinegar echo park kitsch biodiesel, wolf yr copper mug wayfarers scenester franzen.</p>
+              <span> 10.03.2019</span>
+            </li>
+            <li>
+              <img src="IMG\VeranstaltungenIMG\office-1209640_1920.jpg" alt="">
+              <br>
+              <br>
+              <h6>GSV-Workshop</h6>
+              <br>
+              <p>Lorem ipsum dolor amet raclette drinking vinegar echo park kitsch biodiesel, wolf yr copper mug wayfarers scenester franzen.</p>
+              <span> 10.03.2019</span>
+            </li>
+          </ul>
+        </div>
+        <div >
+          <ul class="newsList" >
+            <li>
+              <img src="IMG\digital_space_universe_4k_8k.jpg" alt="">
+              <br>
+              <br>
+              <h6>GSV-Workshop</h6>
+              <br>
+              <p>Lorem ipsum dolor amet raclette drinking vinegar echo park kitsch biodiesel, wolf yr copper mug wayfarers scenester franzen.</p>
+              <span> 10.03.2019</span>
+            </li>
+            <li><img src="IMG\VeranstaltungenIMG\office-1209640_1920.jpg" alt="">
+            <br>
+            <br>
+            <h6>GSV-Workshop</h6>
+            <br>
+            <p>Lorem ipsum dolor amet raclette drinking vinegar echo park kitsch biodiesel, wolf yr copper mug wayfarers scenester franzen.</p>
+            <span> 10.03.2019</span>
+          </li>
+
+            <li>
+              <img src="IMG\VeranstaltungenIMG\office-1209640_1920.jpg" alt="">
+              <br>
+              <br>
+              <h6>GSV-Workshop</h6>
+              <br>
+              <p>Lorem ipsum dolor amet raclette drinking vinegar echo park kitsch biodiesel, wolf yr copper mug wayfarers scenester franzen.</p>
+              <span> 10.03.2019</span>
+            </li>
+            <li>
+              <img src="IMG\VeranstaltungenIMG\workfree.jpg" alt="">
+              <br>
+              <br>
+              <h6>GSV-Workshop</h6>
+              <br>
+              <p>Lorem ipsum dolor amet raclette drinking vinegar echo park kitsch biodiesel, wolf yr copper mug wayfarers scenester franzen.</p>
+              <span> 10.03.2019</span>
+            </li>
+          </ul>
+        </div>
+    </div>
+
+      <br>
+      <div class="navArrows">
+        <div>
+          <button class="newsLeft"><a href="#news"><</a></button>
+          <button class="newsRight"><a href="#news">></a></button>
+        </div>
+
+      </div>
 
     </div>
 
 
     <footer id="footer">
 
-        <!--Impressum-->
+        <!--impressum-->
         <div><p> <a href="#" class="impressum">Impressum</a></p></div>
 
         <!--Copyright-->
@@ -128,10 +252,8 @@
     </footer>
 
 
-
-
-
-
-
-
+    <!---Javascript-Skripte-->
+    <script src="JS/script.js"></script>
+    <script src="JS/StartJS.js"></script>
 </body>
+</html>

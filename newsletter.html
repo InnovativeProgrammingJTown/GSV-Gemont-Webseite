@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!--Stylesheet für Smartphones (10-2018)-->
-    <link rel=stylesheet href="css/5-Newsletter/newsletterMobile.css" media="screen and (min-width: 200px) and (max-width: 600px)" >
+    <link rel=stylesheet href="CSS/5-Newsletter/newsletterMobile.css" media="screen and (min-width: 200px) and (max-width: 600px)" >
 
     <!--Stylesheet für Tablets (10-2018)-->
     <link rel="stylesheet" href="#" media="screen and (min-width: 601px) and (max-width: 1000px)">
@@ -32,14 +32,13 @@
     <!--Icon Einbindung-->
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
-    <script src="JS/script.js"></script>
+
 
 
 </head>
 
 
 <body>
-    <!-------------Javascript-Skripte------------->
 
 
 
@@ -50,7 +49,7 @@
     <nav>
 
         <!--DropdownContainer-->
-        <div class="dropdown">
+        <div class="dropdown navElement">
 
             <!--Hamburger Button, bei Klick wird Dropdown dargestellt-->
             <button id="hamburgerButton" onclick="dropDown()"class="hamburger hamburger--slider" type="button">
@@ -69,26 +68,24 @@
 
                     <li><span><a href="Start.html">Startseite</a></span></li>
                     <li><span><a href="ueberuns.html">Über Uns</a></span></li>
-                    <li><span><a href="#">Projekte und Inhalte</a></span>
-                    </li>
+                    <!-- <li><span><a href="#">Projekte und Inhalte</a></span>
+                    </li> -->
                     <li><!--GSV Logo (nur für den Desktop relevant)-->
                 <img src="IMG/gsvGemontLogo.jpg" alt="gemontlogo" class="logonav" id="logodesktop" ></li>
                     <li><span><a href="Veranstaltungen.html" >Veranstaltungen</a></span></li>
-                    <li><span><a href="#" class="active">Newsletter</a></span></li>
+                    <li><span><a href="newsletter.html" class="active">Newsletter</a></span></li>
                     <li><span><a href="Kontakt.html">Kontakt</a></span></li>
                 </ul>
             </div>
-
-
         </div>
 
         <!--Name der aktuellen Seite mittig in der Navbar (Tablet&Smartphone)-->
-        <div>
+        <div class="navElement ">
             <h3>Newsletter</h3>
         </div>
 
         <!--GSV Logo Rechts oben in der Navbar (Tablet & Smartphone)-->
-        <div>
+        <div class="navElement divLogoNav ">
             <!--GSV Logo-->
             <img class="logonav" id="logomobile" src="IMG/gsvGemontLogoWeissTransparent.png" alt="gemontlogo">
         </div>
@@ -124,7 +121,7 @@
     <footer id="footer">
 
         <!--Impressum-->
-        <div><p> <a href="#" class="impressum">Impressum</a></p></div>
+        <div><p> <a href="#">Impressum</a></p></div>
 
         <!--Copyright-->
 
@@ -137,8 +134,9 @@
 
 
 
-
+    <script src="JS/script.js"></script>
 
 
 
 </body>
+</html>

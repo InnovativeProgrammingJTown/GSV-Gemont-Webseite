@@ -34,7 +34,7 @@
     <!--Icon Einbindung-->
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
-    <script src="JS/script.js"></script>
+
 
 
 
@@ -56,7 +56,7 @@
     <nav>
 
         <!--DropdownContainer-->
-        <div class="dropdown">
+        <div class="dropdown navElement">
 
             <!--Hamburger Button, bei Klick wird Dropdown dargestellt-->
             <button id="hamburgerButton" onclick="dropDown()"class="hamburger hamburger--slider invisibleOnDesktop" type="button">
@@ -75,8 +75,8 @@
 
                     <li><span><a href="Start.html">Startseite</a></span></li>
                     <li><span><a href="ueberuns.html">Über Uns</a></span></li>
-                    <li><span><a href="#">Projekte und Inhalte</a></span>
-                    </li>
+                    <!-- <li><span><a href="#">Projekte und Inhalte</a></span>
+                    </li> -->
                     <li><!--GSV Logo (nur für den Desktop relevant)-->
                 <img src="IMG/gsvGemontLogo.jpg" alt="gemontlogo" class="logonav hiddenMobile" id="logodesktop" ></li>
                     <li><span><a href="Veranstaltungen.html" class="active">Veranstaltungen</a></span></li>
@@ -90,12 +90,12 @@
         </div>
 
         <!--Name der aktuellen Seite mittig in der Navbar (Tablet&Smartphone)-->
-        <div>
+        <div class="navUeberschrift navElement">
             <h3>Veranstaltungen</h3>
         </div>
 
         <!--GSV Logo Rechts oben in der Navbar (Tablet & Smartphone)-->
-        <div>
+        <div class="navElement divLogoNav">
             <!--GSV Logo-->
             <img class="logonav" id="logomobile" src="IMG/gsvGemontLogoWeissTransparent.png" alt="gemontlogo">
         </div>
@@ -289,10 +289,11 @@
     </footer>
 
 
-
-
+    <script src="JS/script.js"></script>
+    <script src="JS/veranstaltungen.js"></script>
 
 
 
 
 </body>
+</html>
