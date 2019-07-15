@@ -65,6 +65,7 @@ nav ul{
     margin: 0;
 }
 
+
 /*Links des Dropdown-Menüs*/
 nav ul li a{
     text-decoration: none;
@@ -76,9 +77,10 @@ nav ul li a{
 /*Effekt beim Hovern über einen Link*/
 nav ul li a:hover{
     background-color: #D9391C;
+    color: white;
+    text-decoration: none;
 }
-
-nav ul li a:active{
+nav ul li:active{
   color: white;
   text-decoration: none;
 }
